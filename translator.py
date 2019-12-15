@@ -1,10 +1,12 @@
 #This is the translator for the english-to-morse-code repo
-english = input("Code to translate:\n")
-print()
+
+#Fetching message
+english = input("Message to translate:\n")
+#Making lowercase for ease and seperating into characters
 english = english.lower()
-# print(english)
 chars = list(english)
-# print(chars)
+
+#This is the dictionary of morse to english
 dicts = {
 	"a": ".- ",
 	"b": "-... ",
@@ -50,5 +52,9 @@ dicts = {
 	"'": ".----. ",
 
 }
+
+#Creating the new characters
 newchars = [dicts[i] for i in chars]
+
+#Print!
 print("".join(newchars))
